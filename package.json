@@ -1,5 +1,5 @@
 {
-  "name": "pawover-eslint-rules",
+  "name": "@pawover/eslint-rules",
   "author": "pawover<pawover@outlook.com>",
   "description": "pawover's esLint rules",
   "license": "MIT",
