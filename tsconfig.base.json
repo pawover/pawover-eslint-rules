@@ -6,7 +6,7 @@
     "moduleDetection": "force",
     "isolatedModules": true,
     "incremental": true,
-    "allowImportingTsExtensions": true,
+    "allowImportingTsExtensions": false,
     "allowUmdGlobalAccess": true,
     "allowJs": true,
     "strict": true,
@@ -22,7 +22,8 @@
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "noUnusedParameters": false,
-    "noEmit": true,
+    "noEmit": false,
+    "declaration": true,
     "useDefineForClassFields": true,
     "verbatimModuleSyntax": true
   }

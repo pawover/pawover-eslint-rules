@@ -4,7 +4,8 @@
   "description": "pawover's esLint rules",
   "license": "MIT",
   "type": "module",
-  "version": "0.0.0-alpha.1",
+  "version": "0.0.0-alpha.3",
+  "packageManager": "pnpm@10.20.0",
   "engines": {
     "node": ">=22.20.0"
   },
@@ -13,22 +14,27 @@
     "pawover-eslint",
     "pawover-eslint-rules"
   ],
-  "main": "./src/index.js",
-  "module": "./src/index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "dist/types/index.d.ts",
   "files": [
-    "./src/preset.js"
+    "dist"
   ],
   "exports": {
     ".": {
-      "import": "./src/index.js",
-      "default": "./src/index.js"
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
     },
     "./src/*": {
-      "import": "./src/*.js",
-      "default": "./src/*.js"
+      "types": "./dist/types/*.d.ts",
+      "import": "./dist/*.js",
+      "default": "./dist/*.js"
     }
   },
   "scripts": {
+    "build": "tsc",
+    "public": "npm publish --access public",
     "check": "pnpm check:types & pnpm check:eslint & pnpm check:format",
     "check:types": "tsc --noEmit",
     "check:eslint": "eslint --fix \"**/*.{js,cjs,mjs,ts,cts,mts,jsx,tsx,vue}\" --cache-location=eslint.cache.json --cache",
@@ -36,6 +42,7 @@
     "clean": "pnpm clean:cache & pnpm clean:lib",
     "clean:cache": "rimraf -g **/*.cache.json **/auto-*.json **/auto-*.d.ts",
     "clean:lib": "rimraf -g **/node_modules",
+    "clean:output": "rimraf -g dist",
     "lib:up": "taze -I -r --exclude pnpm"
   },
   "devDependencies": {
