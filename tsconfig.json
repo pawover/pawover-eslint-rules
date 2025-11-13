@@ -8,6 +8,6 @@
     "declarationDir": "dist/types",
     "types": []
   },
-  "include": ["*.config.ts", "*.d.ts", "src/**/*", "types/**/*"],
+  "include": ["*.config.ts", "*.d.ts", "src/**/*"],
   "exclude": ["node_modules"]
 }
