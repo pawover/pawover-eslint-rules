@@ -14,6 +14,11 @@
     "pawover-eslint",
     "pawover-eslint-rules"
   ],
+  "homepage": "https://github.com/pawover/pawover-eslint-rules#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pawover/pawover-eslint-rules.git"
+  },
   "main": "./dist/index.js",
   "module": "./dist/index.js",
   "types": "dist/types/index.d.ts",
@@ -34,15 +39,15 @@
   },
   "scripts": {
     "build": "tsc",
-    "public": "npm publish --access public",
+    "public": "pnpm build && npm publish --access public",
     "check": "pnpm check:types & pnpm check:eslint & pnpm check:format",
     "check:types": "tsc --noEmit",
     "check:eslint": "eslint --fix \"**/*.{js,cjs,mjs,ts,cts,mts,jsx,tsx,vue}\" --cache-location=eslint.cache.json --cache",
     "check:format": "prettier --write \"**/*.{html,json}\" !.vscode/settings.json --cache-location=prettier.cache.json --cache",
-    "clean": "pnpm clean:cache & pnpm clean:lib",
+    "clean": "pnpm clean:cache & pnpm clean:lib & pnpm clean:output",
     "clean:cache": "rimraf -g **/*.cache.json **/auto-*.json **/auto-*.d.ts",
     "clean:lib": "rimraf -g **/node_modules",
-    "clean:output": "rimraf -g dist",
+    "clean:output": "rimraf dist",
     "lib:up": "taze -I -r --exclude pnpm"
   },
   "devDependencies": {
