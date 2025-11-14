@@ -44,6 +44,7 @@
     "check:types": "tsc --noEmit",
     "check:eslint": "eslint --fix \"**/*.{js,cjs,mjs,ts,cts,mts,jsx,tsx,vue}\" --cache-location=eslint.cache.json --cache",
     "check:format": "prettier --write \"**/*.{html,json}\" !.vscode/settings.json --cache-location=prettier.cache.json --cache",
+    "check:pack": "attw --pack .",
     "clean": "pnpm clean:cache & pnpm clean:lib & pnpm clean:output",
     "clean:cache": "rimraf -g **/*.cache.json **/auto-*.json **/auto-*.d.ts",
     "clean:lib": "rimraf -g **/node_modules",
