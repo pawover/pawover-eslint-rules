@@ -32,7 +32,7 @@ export default {
   "ts/class-methods-use-this": 0,
   "ts/consistent-generic-constructors": 0,
   "ts/consistent-indexed-object-style": 0,
-  "ts/consistent-type-assertions": [2, { assertionStyle: "as", objectLiteralTypeAssertions: "allow-as-parameter" }],
+  "ts/consistent-type-assertions": 2,
   "ts/consistent-type-definitions": [2, "interface"],
   "ts/consistent-type-exports": 2,
   "ts/consistent-type-imports": [2, { fixStyle: "inline-type-imports" }],

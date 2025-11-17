@@ -4,7 +4,7 @@
   "description": "pawover's esLint rules",
   "license": "MIT",
   "type": "module",
-  "version": "0.0.0-alpha.6",
+  "version": "0.0.0-alpha.7",
   "packageManager": "pnpm@10.20.0",
   "engines": {
     "node": ">=22.20.0"
