@@ -5,7 +5,7 @@ export default {
   "vue/html-self-closing": [2, { html: { void: "always", normal: "always", component: "always" }, svg: "always", math: "always" }],
   "vue/script-indent": [2, 2, { baseIndent: 0, switchCase: 1, ignores: [] }],
 
-  "vue/block-order": [2, { order: ["script:not([setup])", "script[setup]", "template", "style:not([scoped])", "style[scoped]"] }],
+  "vue/block-order": [2, { order: ["script:not([setup])", "script[setup]", "template", "style[scoped]", "style:not([scoped])"] }],
   "vue/component-name-in-template-casing": [2, "PascalCase", { registeredComponentsOnly: false }],
   "vue/component-options-name-casing": [2, "PascalCase"],
   "vue/custom-event-name-casing": [2, "camelCase", { ignores: [] }],

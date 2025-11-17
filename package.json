@@ -4,7 +4,7 @@
   "description": "pawover's esLint rules",
   "license": "MIT",
   "type": "module",
-  "version": "0.0.0-alpha.7",
+  "version": "0.0.0-alpha.8",
   "packageManager": "pnpm@10.20.0",
   "engines": {
     "node": ">=22.20.0"
@@ -42,11 +42,11 @@
     "public": "pnpm build && npm publish --access public",
     "check": "pnpm check:types & pnpm check:eslint & pnpm check:format",
     "check:types": "tsc --noEmit",
-    "check:eslint": "eslint --fix \"**/*.{js,cjs,mjs,ts,cts,mts,jsx,tsx,vue}\" --cache-location=eslint.cache.json --cache",
-    "check:format": "prettier --write \"**/*.{html,json}\" !.vscode/settings.json --cache-location=prettier.cache.json --cache",
+    "check:eslint": "eslint --fix \"**/*.{js,cjs,mjs,ts,cts,mts,jsx,tsx,vue}\" --cache-location=.cache/eslint.cache.json --cache",
+    "check:format": "prettier --write \"**/*.{html,json}\" !.vscode/settings.json --cache-location=.cache/prettier.cache.json --cache",
     "check:pack": "attw --pack .",
     "clean": "pnpm clean:cache & pnpm clean:lib & pnpm clean:output",
-    "clean:cache": "rimraf -g **/*.cache.json **/auto-*.json **/auto-*.d.ts",
+    "clean:cache": "rimraf -g **/.cache **/auto-*.json **/auto-*.d.ts",
     "clean:lib": "rimraf -g **/node_modules",
     "clean:output": "rimraf dist",
     "lib:up": "taze -I -r --exclude pnpm"

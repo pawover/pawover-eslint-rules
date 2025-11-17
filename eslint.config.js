@@ -6,7 +6,8 @@ import eslintPluginReactHooks from "eslint-plugin-react-hooks";
 import { defineConfig } from "eslint/config";
 import globals from "globals";
 import eslintTs from "typescript-eslint";
-import eslintRules from "./src/index.js";
+// eslint-disable-next-line antfu/no-import-dist
+import eslintRules from "./dist/index.js";
 
 const plugins = {
   ts: {
