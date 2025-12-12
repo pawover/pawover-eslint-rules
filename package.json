@@ -38,7 +38,7 @@
     }
   },
   "scripts": {
-    "build": "tsc",
+    "build": "pnpm clean:output && tsc -p tsconfig.build.json",
     "public": "pnpm build && npm publish --access public",
     "check": "pnpm check:types & pnpm check:eslint & pnpm check:format",
     "check:types": "tsc --noEmit",
@@ -52,18 +52,18 @@
     "lib:up": "taze -I -r --exclude pnpm"
   },
   "devDependencies": {
-    "@eslint-react/eslint-plugin": "^2.3.5",
-    "@stylistic/eslint-plugin": "^5.5.0",
+    "@eslint-react/eslint-plugin": "^2.3.13",
+    "@stylistic/eslint-plugin": "^5.6.1",
     "eslint": "^9.39.1",
     "eslint-plugin-antfu": "^3.1.1",
     "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-vue": "^10.5.1",
+    "eslint-plugin-vue": "^10.6.2",
     "globals": "^16.5.0",
-    "prettier": "^3.6.2",
-    "rimraf": "^6.1.0",
-    "taze": "^19.9.0",
+    "prettier": "^3.7.4",
+    "rimraf": "^6.1.2",
+    "taze": "^19.9.2",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.46.4"
+    "typescript-eslint": "^8.49.0"
   },
   "peerDependencies": {
     "@eslint-react/eslint-plugin": "^2.3.5",

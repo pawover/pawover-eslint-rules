@@ -1,13 +1,18 @@
 {
-  "extends": "./tsconfig.app.json",
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "rootDir": "src",
-    "baseUrl": ".",
-    "checkJs": true,
-    "outDir": "dist",
-    "declarationDir": "dist/types",
-    "types": []
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "moduleDetection": "force",
+    "noEmit": true,
+    "declaration": false,
+    "declarationMap": false,
+    "emitDeclarationOnly": false,
+    "rootDir": ".",
+    "baseUrl": "."
   },
-  "include": ["src/**/*"],
+  "include": ["*.config.ts", "*.d.ts", "src/**/*"],
   "exclude": ["node_modules"]
 }
