@@ -58,7 +58,7 @@ export default {
   "stylistic/line-comment-position": 0,
   "stylistic/linebreak-style": 0,
   "stylistic/lines-around-comment": 0,
-  "stylistic/lines-between-class-members": 2,
+  "stylistic/lines-between-class-members": 0,
   "stylistic/max-len": 0,
   "stylistic/max-statements-per-line": 0,
   "stylistic/member-delimiter-style": 2,
@@ -82,7 +82,7 @@ export default {
   "stylistic/object-curly-spacing": [2, "always"],
   "stylistic/object-property-newline": [2, { allowAllPropertiesOnSameLine: true }],
   "stylistic/one-var-declaration-per-line": 2,
-  "stylistic/operator-linebreak": [2, "after", { overrides: { "?": "ignore", ":": "ignore" } }],
+  "stylistic/operator-linebreak": [2, "after", { overrides: { "?": "ignore", ":": "ignore", "|": "before" } }],
   "stylistic/padded-blocks": 0,
   "stylistic/padding-line-between-statements": [
     2,

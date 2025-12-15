@@ -256,7 +256,7 @@ export default {
   "vue/object-curly-spacing": [2, "always"],
   "vue/object-property-newline": [2, { allowAllPropertiesOnSameLine: true }],
   "vue/object-shorthand": 0,
-  "vue/operator-linebreak": [2, "after", { overrides: { "?": "ignore", ":": "ignore" } }],
+  "vue/operator-linebreak": [2, "after", { overrides: { "?": "ignore", ":": "ignore", "|": "before" } }],
   "vue/prefer-template": 0,
   "vue/quote-props": [2, "consistent-as-needed"],
   "vue/space-in-parens": 2,
