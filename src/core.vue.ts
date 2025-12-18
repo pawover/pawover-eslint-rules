@@ -195,7 +195,7 @@ export default {
   "vue/no-useless-v-bind": 2,
   "vue/no-v-text": 0,
   "vue/padding-line-between-blocks": 2,
-  "vue/padding-line-between-tags": 2,
+  "vue/padding-line-between-tags": 0,
   "vue/padding-lines-in-component-definition": 2,
   "vue/prefer-define-options": 2,
   "vue/prefer-prop-type-boolean-first": 2,
