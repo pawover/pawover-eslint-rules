@@ -146,7 +146,7 @@ export default {
   "vue/define-macros-order": [2, { order: ["defineOptions", "defineProps", "defineSlots", "defineEmits"], defineExposeLast: false }],
   "vue/define-props-declaration": 2,
   "vue/define-props-destructuring": 0,
-  "vue/enforce-style-attribute": 2,
+  "vue/enforce-style-attribute": 0,
   "vue/html-button-has-type": 2,
   "vue/html-comment-content-newline": 2,
   "vue/html-comment-content-spacing": 2,
