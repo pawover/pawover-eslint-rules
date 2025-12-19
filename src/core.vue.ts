@@ -143,7 +143,7 @@ export default {
   "vue/component-options-name-casing": [2, "PascalCase"],
   "vue/custom-event-name-casing": [2, "camelCase", { ignores: [] }],
   "vue/define-emits-declaration": 0,
-  "vue/define-macros-order": [2, { order: ["defineOptions", "defineProps", "defineEmits"], defineExposeLast: false }],
+  "vue/define-macros-order": [2, { order: ["defineOptions", "defineProps", "defineSlots", "defineEmits"], defineExposeLast: false }],
   "vue/define-props-declaration": 2,
   "vue/define-props-destructuring": 0,
   "vue/enforce-style-attribute": 2,
