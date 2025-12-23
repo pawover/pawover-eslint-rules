@@ -76,7 +76,7 @@ export default {
   "dot-notation": 0,
   "eqeqeq": 2,
   "func-name-matching": 2,
-  "func-names": 2,
+  "func-names": 1,
   "func-style": 0,
   "grouped-accessor-pairs": [2, "getBeforeSet"],
   "guard-for-in": 2,

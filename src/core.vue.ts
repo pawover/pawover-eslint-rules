@@ -131,7 +131,7 @@ export default {
   "vue/no-lone-template": 2,
   "vue/no-multiple-slot-args": 2,
   "vue/no-required-prop-with-default": 2,
-  "vue/no-v-html": 2,
+  "vue/no-v-html": 0,
   "vue/order-in-components": 2,
   "vue/this-in-template": 2,
 
@@ -167,7 +167,7 @@ export default {
   "vue/no-multiple-objects-in-class": 0,
   "vue/no-negated-v-if-condition": 0,
   "vue/no-potential-component-option-typo": 0,
-  "vue/no-ref-object-reactivity-loss": 2,
+  "vue/no-ref-object-reactivity-loss": 0,
   "vue/no-restricted-block": 0,
   "vue/no-restricted-call-after-await": 0,
   "vue/no-restricted-class": 0,
