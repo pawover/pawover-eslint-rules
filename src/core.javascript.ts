@@ -24,7 +24,7 @@ export default {
   "no-empty-character-class": 2,
   "no-empty-pattern": 2,
   "no-ex-assign": 2,
-  "no-fallthrough": 2,
+  "no-fallthrough": 0,
   "no-func-assign": 2,
   "no-import-assign": 2,
   "no-inner-declarations": 2,
