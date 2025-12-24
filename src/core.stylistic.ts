@@ -79,7 +79,7 @@ export default {
   "stylistic/no-whitespace-before-property": 2,
   "stylistic/nonblock-statement-body-position": 2,
   "stylistic/object-curly-newline": 2,
-  "stylistic/object-curly-spacing": [2, "always", { objectsInObjects: false }],
+  "stylistic/object-curly-spacing": [2, "always"],
   "stylistic/object-property-newline": [2, { allowAllPropertiesOnSameLine: true }],
   "stylistic/one-var-declaration-per-line": 2,
   "stylistic/operator-linebreak": [2, "after", { overrides: { "?": "ignore", ":": "ignore", "|": "before" } }],

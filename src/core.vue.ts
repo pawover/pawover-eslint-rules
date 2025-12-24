@@ -253,7 +253,7 @@ export default {
   "vue/no-sparse-arrays": 2,
   "vue/no-useless-concat": 0,
   "vue/object-curly-newline": 2,
-  "vue/object-curly-spacing": [2, "always", { objectsInObjects: false }],
+  "vue/object-curly-spacing": [2, "always"],
   "vue/object-property-newline": [2, { allowAllPropertiesOnSameLine: true }],
   "vue/object-shorthand": 0,
   "vue/operator-linebreak": [2, "after", { overrides: { "?": "ignore", ":": "ignore", "|": "before" } }],
