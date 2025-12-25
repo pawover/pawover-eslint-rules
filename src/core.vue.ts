@@ -188,7 +188,7 @@ export default {
   "vue/no-undef-properties": 0,
   "vue/no-unsupported-features": 0,
   "vue/no-unused-emit-declarations": 0,
-  "vue/no-unused-properties": 2,
+  "vue/no-unused-properties": 1,
   "vue/no-unused-refs": 2,
   "vue/no-use-v-else-with-v-for": 0,
   "vue/no-useless-mustaches": 2,
