@@ -98,10 +98,7 @@ export default {
   "stylistic/semi-spacing": 2,
   "stylistic/semi-style": 2,
   "stylistic/space-before-blocks": 2,
-  "stylistic/space-before-function-paren": [
-    2,
-    { anonymous: "never", named: "never", asyncArrow: "always", catch: "always" },
-  ],
+  "stylistic/space-before-function-paren": [2, { anonymous: "always", named: "never", asyncArrow: "always", catch: "always" }],
   "stylistic/space-in-parens": 2,
   "stylistic/space-infix-ops": 2,
   "stylistic/space-unary-ops": 2,
