@@ -4,7 +4,7 @@
   "description": "pawover's esLint rules",
   "license": "MIT",
   "type": "module",
-  "version": "0.0.0-alpha.25",
+  "version": "0.0.0-alpha.26",
   "packageManager": "pnpm@10.20.0",
   "engines": {
     "node": ">=22.20.0"
@@ -49,32 +49,32 @@
     "clean:cache": "rimraf -g **/.cache **/auto-*.json **/auto-*.d.ts",
     "clean:lib": "rimraf -g **/node_modules",
     "clean:output": "rimraf dist",
-    "lib:up": "taze -I -r --exclude pnpm"
+    "lib:up": "taze -I -r"
   },
   "devDependencies": {
-    "@eslint-react/eslint-plugin": "^2.3.13",
+    "@eslint-react/eslint-plugin": "^2.5.1",
     "@stylistic/eslint-plugin": "^5.6.1",
     "eslint": "^9.39.2",
     "eslint-plugin-antfu": "^3.1.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-vue": "^10.6.2",
-    "globals": "^16.5.0",
+    "globals": "^17.0.0",
     "prettier": "^3.7.4",
     "rimraf": "^6.1.2",
     "taze": "^19.9.2",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.49.0"
+    "typescript-eslint": "^8.52.0"
   },
   "peerDependencies": {
-    "@eslint-react/eslint-plugin": "^2.3.5",
-    "@stylistic/eslint-plugin": "^5.5.0",
-    "eslint": "^9.39.1",
-    "eslint-plugin-antfu": "^3.1.1",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-vue": "^10.5.1",
-    "globals": "^16.5.0",
-    "typescript": "^5.9.3",
-    "typescript-eslint": "^8.46.4"
+    "@eslint-react/eslint-plugin": ">=2.3.5",
+    "@stylistic/eslint-plugin": ">=5.5.0",
+    "eslint": ">=9.39.1",
+    "eslint-plugin-antfu": ">=3.1.1",
+    "eslint-plugin-react-hooks": ">=7.0.1",
+    "eslint-plugin-vue": ">=10.5.1",
+    "globals": ">=16.5.0",
+    "typescript": ">=5.9.3",
+    "typescript-eslint": ">=8.46.4"
   },
   "peerDependenciesMeta": {
     "@eslint-react/eslint-plugin": {
