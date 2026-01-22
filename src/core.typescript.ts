@@ -65,7 +65,7 @@ export default {
   "ts/no-for-in-array": 0,
   "ts/no-implied-eval": 2,
   "ts/no-import-type-side-effects": 2,
-  "ts/no-inferrable-types": [2, { ignoreParameters: false, ignoreProperties: true }],
+  "ts/no-inferrable-types": [2, { ignoreParameters: true, ignoreProperties: true }],
   "ts/no-invalid-void-type": 2,
   "ts/no-loop-func": 0,
   "ts/no-magic-numbers": 0,
