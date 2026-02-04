@@ -4,8 +4,8 @@
   "description": "pawover's esLint rules",
   "license": "MIT",
   "type": "module",
-  "version": "0.0.0-beta.1",
-  "packageManager": "pnpm@10.20.0",
+  "version": "0.0.0-beta.2",
+  "packageManager": "pnpm@10.28.2",
   "engines": {
     "node": ">=22.20.0"
   },
@@ -42,7 +42,7 @@
     "public": "pnpm build && npm publish --access public",
     "check": "pnpm check:types & pnpm check:eslint & pnpm check:format",
     "check:types": "tsc --noEmit",
-    "check:eslint": "eslint --fix \"**/*.{js,cjs,mjs,ts,cts,mts,jsx,tsx,vue}\" --cache-location=.cache/eslint.cache.json --cache",
+    "check:eslint": "pnpm build && pnpm eslint --fix \"**/*.{js,cjs,mjs,ts,cts,mts,jsx,tsx,vue}\" --cache-location=.cache/eslint.cache.json --cache",
     "check:format": "prettier --write \"**/*.{html,json}\" !.vscode/settings.json --cache-location=.cache/prettier.cache.json --cache",
     "check:pack": "attw --pack .",
     "clean": "pnpm clean:cache & pnpm clean:lib & pnpm clean:output",
@@ -52,18 +52,18 @@
     "lib:up": "taze -I -r"
   },
   "devDependencies": {
-    "@eslint-react/eslint-plugin": "^2.5.1",
-    "@stylistic/eslint-plugin": "^5.6.1",
+    "@eslint-react/eslint-plugin": "^2.9.4",
+    "@stylistic/eslint-plugin": "^5.7.1",
     "eslint": "^9.39.2",
-    "eslint-plugin-antfu": "^3.1.1",
+    "eslint-plugin-antfu": "^3.1.3",
     "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-vue": "^10.6.2",
-    "globals": "^17.0.0",
-    "prettier": "^3.7.4",
+    "eslint-plugin-vue": "^10.7.0",
+    "globals": "^17.3.0",
+    "prettier": "^3.8.1",
     "rimraf": "^6.1.2",
     "taze": "^19.9.2",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.52.0"
+    "typescript-eslint": "^8.54.0"
   },
   "peerDependencies": {
     "@eslint-react/eslint-plugin": ">=2.3.5",
@@ -73,6 +73,7 @@
     "eslint-plugin-react-hooks": ">=7.0.1",
     "eslint-plugin-vue": ">=10.5.1",
     "globals": ">=16.5.0",
+    "react": ">=19.2.0",
     "typescript": ">=5.9.3",
     "typescript-eslint": ">=8.46.4"
   },
@@ -93,6 +94,9 @@
       "optional": true
     },
     "globals": {
+      "optional": true
+    },
+    "react": {
       "optional": true
     },
     "typescript": {
