@@ -111,7 +111,7 @@ export default {
   "ts/no-useless-empty-export": 0,
   "ts/no-wrapper-object-types": 2,
   "ts/non-nullable-type-assertion-style": 0,
-  "ts/only-throw-error": 0,
+  "ts/only-throw-error": [2, { allow: [{ from: "package", package: "@tanstack/router-core", name: "Redirect" }] }],
   "ts/parameter-properties": 0,
   "ts/prefer-as-const": 0,
   "ts/prefer-destructuring": 0,
