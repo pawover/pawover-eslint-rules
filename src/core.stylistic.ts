@@ -87,7 +87,7 @@ export default {
   "stylistic/space-before-blocks": 2,
   "stylistic/space-before-function-paren": [2, { anonymous: "always", named: "always", asyncArrow: "always", catch: "always" }],
   "stylistic/space-in-parens": 2,
-  "stylistic/space-infix-ops": [2, { ignoreTypes: true }],
+  "stylistic/space-infix-ops": 2,
   "stylistic/space-unary-ops": 2,
   "stylistic/spaced-comment": 2,
   "stylistic/switch-colon-spacing": 2,
