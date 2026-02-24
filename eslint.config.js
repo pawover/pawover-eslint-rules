@@ -4,7 +4,6 @@ import eslintPluginAntfu from "eslint-plugin-antfu";
 import eslintPluginReactHooks from "eslint-plugin-react-hooks";
 
 import { defineConfig } from "eslint/config";
-import globals from "globals";
 import eslintTs from "typescript-eslint";
 // eslint-disable-next-line antfu/no-import-dist
 import eslintRules from "./dist/index.js";
@@ -73,7 +72,6 @@ export default defineConfig([
     files: ["**/*.{js,cjs,mjs}"],
     plugins: { ...plugins.stylistic, ...plugins.antfu },
     languageOptions: {
-      globals: { ...globals.browser, ...globals.es2020, ...globals.node },
       parserOptions: {
         ecmaFeatures: {
           jsx: false,

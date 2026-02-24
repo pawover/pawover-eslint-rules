@@ -87,6 +87,7 @@ export default {
   "react-naming-convention/context-name": 2,
   "react-naming-convention/filename": 0,
   "react-naming-convention/filename-extension": 0,
+  "react-naming-convention/id-name": 2,
   "react-naming-convention/ref-name": 2,
   "react-naming-convention/use-state": 2,
 };
