@@ -2,6 +2,7 @@ import javascriptRules from "./core.javascript.js";
 import typescriptRules from "./core.typescript.js";
 
 import antfuRules from "./core.antfu.js";
+import importsRules from "./core.imports.js";
 import reactRules from "./core.react.js";
 import stylisticRules from "./core.stylistic.js";
 import vueRules from "./core.vue.js";
@@ -17,6 +18,7 @@ const react = reactRules as unknown as Record<keyof typeof reactRules, RuleConfi
 const vue = vueRules as unknown as Record<keyof typeof vueRules, RuleConfig>;
 const stylistic = stylisticRules as unknown as Record<keyof typeof stylisticRules, RuleConfig>;
 const antfu = antfuRules as unknown as Record<keyof typeof antfuRules, RuleConfig>;
+const imports = importsRules as unknown as Record<keyof typeof importsRules, RuleConfig>;
 
 export default {
   javascript,
@@ -25,4 +27,5 @@ export default {
   vue,
   stylistic,
   antfu,
+  imports,
 };

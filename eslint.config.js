@@ -1,6 +1,7 @@
 import eslintPluginReact from "@eslint-react/eslint-plugin";
 import eslintPluginStylistic from "@stylistic/eslint-plugin";
 import eslintPluginAntfu from "eslint-plugin-antfu";
+import eslintPluginImports from "eslint-plugin-import-lite";
 import eslintPluginReactHooks from "eslint-plugin-react-hooks";
 
 import { defineConfig } from "eslint/config";
@@ -26,6 +27,9 @@ const plugins = {
   },
   antfu: {
     antfu: eslintPluginAntfu,
+  },
+  imports: {
+    imports: eslintPluginImports.configs.all.plugins["import-lite"],
   },
 };
 const GLOB_EXCLUDE = [
@@ -70,7 +74,11 @@ export default defineConfig([
   },
   {
     files: ["**/*.{js,cjs,mjs}"],
-    plugins: { ...plugins.stylistic, ...plugins.antfu },
+    plugins: {
+      ...plugins.stylistic,
+      ...plugins.antfu,
+      ...plugins.imports,
+    },
     languageOptions: {
       parserOptions: {
         ecmaFeatures: {
@@ -82,11 +90,18 @@ export default defineConfig([
       ...eslintRules.javascript,
       ...eslintRules.stylistic,
       ...eslintRules.antfu,
+      ...eslintRules.imports,
     },
   },
   {
     files: ["**/*.{ts,cts,mts,tsx}"],
-    plugins: { ...plugins.ts, ...plugins.react, ...plugins.stylistic, ...plugins.antfu },
+    plugins: {
+      ...plugins.ts,
+      ...plugins.react,
+      ...plugins.stylistic,
+      ...plugins.antfu,
+      ...plugins.imports,
+    },
     languageOptions: {
       parser: eslintTs.parser,
       parserOptions: {
@@ -101,6 +116,7 @@ export default defineConfig([
       ...eslintRules.reactRefresh,
       ...eslintRules.stylistic,
       ...eslintRules.antfu,
+      ...eslintRules.imports,
     },
   },
 ]);
