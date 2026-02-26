@@ -1,5 +1,5 @@
 export default {
-  "imports/consistent-type-specifier-style": 2,
+  "imports/consistent-type-specifier-style": [2, "prefer-top-level"],
   "imports/exports-last": 0,
   "imports/first": 2,
   "imports/newline-after-import": [2, { count: 1 }],
