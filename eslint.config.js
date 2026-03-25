@@ -14,12 +14,11 @@ const plugins = {
     ts: eslintTs.plugin,
   },
   react: {
-    "react": eslintPluginReact.configs.all.plugins["@eslint-react"],
+    "react-x": eslintPluginReact.configs.all.plugins["@eslint-react"],
     "react-dom": eslintPluginReact.configs.all.plugins["@eslint-react/dom"],
     "react-rsc": eslintPluginReact.configs.all.plugins["@eslint-react/rsc"],
     "react-web-api": eslintPluginReact.configs.all.plugins["@eslint-react/web-api"],
     "react-hooks": eslintPluginReactHooks,
-    "react-hooks-extra": eslintPluginReact.configs.all.plugins["@eslint-react/hooks-extra"],
     "react-naming-convention": eslintPluginReact.configs.all.plugins["@eslint-react/naming-convention"],
   },
   stylistic: {

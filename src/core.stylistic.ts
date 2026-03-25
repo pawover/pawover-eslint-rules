@@ -59,7 +59,7 @@ export default {
   "stylistic/no-floating-decimal": 2,
   "stylistic/no-mixed-operators": 0,
   "stylistic/no-mixed-spaces-and-tabs": 2,
-  "stylistic/no-multi-spaces": 2,
+  "stylistic/no-multi-spaces": [2, { exceptions: { Property: false, ImportAttribute: false } }],
   "stylistic/no-multiple-empty-lines": [2, { max: 2, maxEOF: 1, maxBOF: 0 }],
   "stylistic/no-tabs": 0,
   "stylistic/no-trailing-spaces": 2,
