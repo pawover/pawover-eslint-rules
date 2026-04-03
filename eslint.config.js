@@ -14,12 +14,8 @@ const plugins = {
     ts: eslintTs.plugin,
   },
   react: {
-    "react-x": eslintPluginReact.configs.all.plugins["@eslint-react"],
-    "react-dom": eslintPluginReact.configs.all.plugins["@eslint-react/dom"],
-    "react-rsc": eslintPluginReact.configs.all.plugins["@eslint-react/rsc"],
-    "react-web-api": eslintPluginReact.configs.all.plugins["@eslint-react/web-api"],
+    "@eslint-react": eslintPluginReact,
     "react-hooks": eslintPluginReactHooks,
-    "react-naming-convention": eslintPluginReact.configs.all.plugins["@eslint-react/naming-convention"],
   },
   stylistic: {
     stylistic: eslintPluginStylistic,
@@ -97,6 +93,7 @@ export default defineConfig([
     plugins: {
       ...plugins.ts,
       ...plugins.react,
+      ...plugins.reactHooks,
       ...plugins.stylistic,
       ...plugins.antfu,
       ...plugins.imports,
@@ -112,7 +109,7 @@ export default defineConfig([
       ...eslintRules.javascript,
       ...eslintRules.typescript,
       ...eslintRules.react,
-      ...eslintRules.reactRefresh,
+      ...eslintRules.reactHooks,
       ...eslintRules.stylistic,
       ...eslintRules.antfu,
       ...eslintRules.imports,

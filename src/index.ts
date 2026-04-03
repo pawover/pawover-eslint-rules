@@ -4,6 +4,7 @@ import typescriptRules from "./core.typescript.js";
 import antfuRules from "./core.antfu.js";
 import importsRules from "./core.imports.js";
 import reactRules from "./core.react.js";
+import reactHooksRules from "./core.reactHooks.js";
 import stylisticRules from "./core.stylistic.js";
 import vueRules from "./core.vue.js";
 
@@ -15,6 +16,7 @@ export type RuleConfig = Severity | [Severity];
 const javascript = javascriptRules as unknown as Record<keyof typeof javascriptRules, RuleConfig>;
 const typescript = typescriptRules as unknown as Record<keyof typeof typescriptRules, RuleConfig>;
 const react = reactRules as unknown as Record<keyof typeof reactRules, RuleConfig>;
+const reactHooks = reactHooksRules as unknown as Record<keyof typeof reactHooksRules, RuleConfig>;
 const vue = vueRules as unknown as Record<keyof typeof vueRules, RuleConfig>;
 const stylistic = stylisticRules as unknown as Record<keyof typeof stylisticRules, RuleConfig>;
 const antfu = antfuRules as unknown as Record<keyof typeof antfuRules, RuleConfig>;
@@ -24,6 +26,7 @@ export default {
   javascript,
   typescript,
   react,
+  reactHooks,
   vue,
   stylistic,
   antfu,
