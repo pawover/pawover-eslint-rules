@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
-    "lib": ["ES2020", "DOM"],
+    "lib": ["ES2020"],
     "target": "ES2020",
     "module": "ESNext",
     "moduleResolution": "Bundler",
@@ -12,6 +12,6 @@
     "emitDeclarationOnly": false,
     "rootDir": "."
   },
-  "include": ["*.config.ts", "*.d.ts", "src/**/*"],
-  "exclude": ["node_modules"]
+  "include": ["**/*"],
+  "exclude": ["**/node_modules"]
 }

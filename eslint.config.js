@@ -1,12 +1,14 @@
+// @ts-nocheck
+import { defineConfig } from "eslint/config";
+
+import eslintTs from "typescript-eslint";
 import eslintPluginReact from "@eslint-react/eslint-plugin";
 import eslintPluginStylistic from "@stylistic/eslint-plugin";
 import eslintPluginAntfu from "eslint-plugin-antfu";
 import eslintPluginImports from "eslint-plugin-import-lite";
 import eslintPluginReactHooks from "eslint-plugin-react-hooks";
+import eslintPluginSimpleImportSort from "eslint-plugin-simple-import-sort";
 
-import { defineConfig } from "eslint/config";
-import eslintTs from "typescript-eslint";
-// eslint-disable-next-line antfu/no-import-dist
 import eslintRules from "./dist/index.js";
 
 const plugins = {
@@ -24,95 +26,61 @@ const plugins = {
     antfu: eslintPluginAntfu,
   },
   imports: {
-    imports: eslintPluginImports.configs.all.plugins["import-lite"],
+    "imports": eslintPluginImports.configs.all.plugins["import-lite"],
+    "simple-import-sort": eslintPluginSimpleImportSort,
   },
 };
-const GLOB_EXCLUDE = [
-  "**/node_modules",
-  "**/dist",
-  "**/package-lock.json",
-  "**/yarn.lock",
-  "**/pnpm-lock.yaml",
-  "**/bun.lockb",
-  "**/output",
-  "**/coverage",
-  "**/temp",
-  "**/.temp",
-  "**/tmp",
-  "**/.tmp",
-  "**/.history",
-  "**/.vitepress/cache",
-  "**/.nuxt",
-  "**/.next",
-  "**/.svelte-kit",
-  "**/.vercel",
-  "**/.changeset",
-  "**/.idea",
-  "**/.cache",
-  "**/.output",
-  "**/.vite-inspect",
-  "**/.yarn",
-  "**/vite.config.*.timestamp-*",
-  "**/CHANGELOG*.md",
-  "**/*.min.*",
-  "**/LICENSE*",
-  "**/__snapshots__",
-  "**/auto-import?(s).d.ts",
-  "**/auto-component?(s).d.ts",
-  "**/auto-router?(s).d.ts",
-  "routeTree.gen.ts",
-];
 
 export default defineConfig([
   {
-    ignores: GLOB_EXCLUDE,
+    ignores: eslintRules.GLOB_EXCLUDE,
   },
   {
-    files: ["**/*.{js,cjs,mjs}"],
+    files: ["**/*.js"],
+    ignores: ["eslint.config.js"],
+    languageOptions: {
+      parserOptions: {
+        sourceType: "module",
+        ecmaVersion: 2020,
+      },
+    },
     plugins: {
       ...plugins.stylistic,
       ...plugins.antfu,
       ...plugins.imports,
-    },
-    languageOptions: {
-      parserOptions: {
-        ecmaFeatures: {
-          jsx: false,
-        },
-      },
     },
     rules: {
       ...eslintRules.javascript,
       ...eslintRules.stylistic,
       ...eslintRules.antfu,
       ...eslintRules.imports,
+      ...eslintRules.importsSort,
+      "antfu/no-import-dist": 0,
     },
   },
   {
-    files: ["**/*.{ts,cts,mts,tsx}"],
-    plugins: {
-      ...plugins.ts,
-      ...plugins.react,
-      ...plugins.reactHooks,
-      ...plugins.stylistic,
-      ...plugins.antfu,
-      ...plugins.imports,
-    },
+    files: ["**/*.ts"],
     languageOptions: {
       parser: eslintTs.parser,
       parserOptions: {
-        projectService: true,
-        tsconfigRootDir: import.meta.dirname,
+        project: "./tsconfig.json",
+        sourceType: "module",
+        ecmaVersion: 2020,
       },
+    },
+    plugins: {
+      ...plugins.ts,
+      ...plugins.stylistic,
+      ...plugins.antfu,
+      ...plugins.imports,
     },
     rules: {
       ...eslintRules.javascript,
       ...eslintRules.typescript,
-      ...eslintRules.react,
-      ...eslintRules.reactHooks,
       ...eslintRules.stylistic,
       ...eslintRules.antfu,
       ...eslintRules.imports,
+      ...eslintRules.importsSort,
     },
   },
 ]);
