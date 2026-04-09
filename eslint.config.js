@@ -10,7 +10,7 @@ import eslintPluginSimpleImportSort from "eslint-plugin-simple-import-sort";
 import eslintRules from "./dist/index.js";
 
 const plugins = {
-  ts: {
+  typescript: {
     ts: eslintTs.plugin,
   },
   stylistic: {
@@ -43,7 +43,7 @@ export default defineConfig([
       },
     },
     plugins: {
-      ...plugins.ts,
+      ...plugins.typescript,
       ...plugins.stylistic,
       ...plugins.antfu,
       ...plugins.imports,
