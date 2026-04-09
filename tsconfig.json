@@ -11,7 +11,5 @@
     "declarationMap": false,
     "emitDeclarationOnly": false,
     "rootDir": "."
-  },
-  "include": ["**/*"],
-  "exclude": ["**/node_modules"]
+  }
 }
