@@ -5,7 +5,7 @@ import eslintTs from "typescript-eslint";
 import eslintPluginStylistic from "@stylistic/eslint-plugin";
 import eslintPluginAntfu from "eslint-plugin-antfu";
 import eslintPluginImports from "eslint-plugin-import-lite";
-import eslintPluginSimpleImportSort from "eslint-plugin-simple-import-sort";
+import eslintPluginImportsSort from "eslint-plugin-simple-import-sort";
 
 import eslintRules from "./dist/index.js";
 
@@ -20,8 +20,8 @@ const plugins = {
     antfu: eslintPluginAntfu,
   },
   imports: {
-    "imports": eslintPluginImports.configs.all.plugins["import-lite"],
-    "simple-import-sort": eslintPluginSimpleImportSort,
+    "import-lite": eslintPluginImports,
+    "simple-import-sort": eslintPluginImportsSort,
   },
 };
 
