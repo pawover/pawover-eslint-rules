@@ -34,7 +34,7 @@ export default {
   "no-misleading-character-class": 2,
   "no-new-native-nonconstructor": 2,
   "no-obj-calls": 2,
-  "no-promise-executor-return": 2,
+  "no-promise-executor-return": [2, { allowVoid: true }],
   "no-prototype-builtins": 2,
   "no-self-assign": 2,
   "no-self-compare": 2,

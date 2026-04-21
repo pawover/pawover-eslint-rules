@@ -8,21 +8,6 @@ import stylisticRules from "./core.stylistic.js";
 import typescriptRules from "./core.typescript.js";
 import vueRules from "./core.vue.js";
 
-export type SeverityLevel = 0 | 1 | 2;
-export type SeverityName = "off" | "warn" | "error";
-export type Severity = SeverityName | SeverityLevel;
-export type RuleConfig<RuleOptions extends unknown[] = unknown[]> = Severity | [Severity, ...Partial<RuleOptions>];
-
-const javascript = javascriptRules as unknown as Record<keyof typeof javascriptRules, RuleConfig>;
-const typescript = typescriptRules as unknown as Record<keyof typeof typescriptRules, RuleConfig>;
-const react = reactRules as unknown as Record<keyof typeof reactRules, RuleConfig>;
-const reactHooks = reactHooksRules as unknown as Record<keyof typeof reactHooksRules, RuleConfig>;
-const vue = vueRules as unknown as Record<keyof typeof vueRules, RuleConfig>;
-const stylistic = stylisticRules as unknown as Record<keyof typeof stylisticRules, RuleConfig>;
-const importsSort = simpleImportSortRules as unknown as Record<keyof typeof simpleImportSortRules, RuleConfig>;
-const antfu = antfuRules as unknown as Record<keyof typeof antfuRules, RuleConfig>;
-const imports = importsRules as unknown as Record<keyof typeof importsRules, RuleConfig>;
-
 const GLOB_EXCLUDE = [
   "**/node_modules",
   "**/dist",
@@ -58,7 +43,22 @@ const GLOB_EXCLUDE = [
   "**/auto-router?(s).d.ts",
 ];
 
-export default {
+export type SeverityLevel = 0 | 1 | 2;
+export type SeverityName = "off" | "warn" | "error";
+export type Severity = SeverityName | SeverityLevel;
+export type RuleConfig<RuleOptions extends unknown[] = unknown[]> = Severity | [Severity, ...Partial<RuleOptions>];
+
+const javascript = javascriptRules as unknown as Record<keyof typeof javascriptRules, RuleConfig>;
+const typescript = typescriptRules as unknown as Record<keyof typeof typescriptRules, RuleConfig>;
+const react = reactRules as unknown as Record<keyof typeof reactRules, RuleConfig>;
+const reactHooks = reactHooksRules as unknown as Record<keyof typeof reactHooksRules, RuleConfig>;
+const vue = vueRules as unknown as Record<keyof typeof vueRules, RuleConfig>;
+const stylistic = stylisticRules as unknown as Record<keyof typeof stylisticRules, RuleConfig>;
+const antfu = antfuRules as unknown as Record<keyof typeof antfuRules, RuleConfig>;
+const imports = importsRules as unknown as Record<keyof typeof importsRules, RuleConfig>;
+const importsSort = simpleImportSortRules as unknown as Record<keyof typeof simpleImportSortRules, RuleConfig>;
+
+const rules = {
   javascript,
   typescript,
   react,
@@ -68,5 +68,31 @@ export default {
   antfu,
   imports,
   importsSort,
+};
+
+function createRules (rule: keyof typeof rules, prefix?: string) {
+  const result: Record<string, RuleConfig<unknown[]>> = {};
+
+  if (rule && typeof rule === "string" && rules[rule]) {
+    if (prefix) {
+      return Object.entries(rules[rule]).reduce((acc, [key, value]) => {
+        const oldPrefix = key.split("/")[0]!;
+        const newPrefix = prefix.split("/")[0]!;
+        const newKey = key.replace(`${oldPrefix}/`, `${newPrefix}/`);
+        acc[newKey] = value;
+
+        return acc;
+      }, result);
+    } else {
+      return rules[rule];
+    }
+  }
+
+  return result;
+}
+
+export default {
+  ...rules,
   GLOB_EXCLUDE,
+  createRules,
 };

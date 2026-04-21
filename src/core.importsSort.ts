@@ -1,4 +1,4 @@
 export default {
-  "simple-import-sort/imports": 2,
-  "simple-import-sort/exports": 2,
+  "importsSort/imports": 2,
+  "importsSort/exports": 2,
 };

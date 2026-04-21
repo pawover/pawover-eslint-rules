@@ -20,8 +20,10 @@ const plugins = {
     antfu: eslintPluginAntfu,
   },
   imports: {
-    "import-lite": eslintPluginImports,
-    "simple-import-sort": eslintPluginImportsSort,
+    imports: eslintPluginImports,
+  },
+  importsSort: {
+    importsSort: eslintPluginImportsSort,
   },
 };
 
@@ -47,6 +49,7 @@ export default defineConfig([
       ...plugins.stylistic,
       ...plugins.antfu,
       ...plugins.imports,
+      ...plugins.importsSort,
     },
     rules: {
       ...eslintRules.javascript,

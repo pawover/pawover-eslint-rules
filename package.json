@@ -4,7 +4,7 @@
   "description": "pawover's esLint rules",
   "license": "MIT",
   "type": "module",
-  "version": "0.0.0-beta.20",
+  "version": "0.0.1",
   "packageManager": "pnpm@10.28.2",
   "engines": {
     "node": ">=22.22.0"
@@ -39,7 +39,7 @@
   },
   "scripts": {
     "build": "pnpm clean:output && tsc -p tsconfig.build.json",
-    "public": "pnpm build && npm publish --access public --tag bate",
+    "public": "pnpm build && npm publish --access public",
     "check": "pnpm check:types & pnpm check:eslint & pnpm check:format",
     "check:types": "tsc",
     "check:eslint": "pnpm build && pnpm eslint --fix \"**/*.{js,cjs,mjs,ts,cts,mts,jsx,tsx,vue}\"",
