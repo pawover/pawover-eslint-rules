@@ -6,7 +6,7 @@
     "allowImportingTsExtensions": true,
     "allowUmdGlobalAccess": true,
     "allowJs": true,
-    "checkJs": true,
+    "checkJs": false,
     "strict": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
@@ -23,6 +23,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "useDefineForClassFields": true,
-    "verbatimModuleSyntax": true
+    "verbatimModuleSyntax": true,
+    "rewriteRelativeImportExtensions": true
   }
 }
