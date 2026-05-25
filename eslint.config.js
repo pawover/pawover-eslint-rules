@@ -1,11 +1,10 @@
-// @ts-nocheck
+/* eslint-disable antfu/no-import-dist */
 import { defineConfig } from "eslint/config";
 
 import eslintTs from "typescript-eslint";
 import eslintPluginStylistic from "@stylistic/eslint-plugin";
 import eslintPluginAntfu from "eslint-plugin-antfu";
 import eslintPluginImports from "eslint-plugin-import-lite";
-import eslintPluginImportsSort from "eslint-plugin-simple-import-sort";
 
 import eslintRules from "./dist/index.js";
 
@@ -21,13 +20,12 @@ const plugins = {
   },
   imports: {
     imports: eslintPluginImports.configs.all.plugins["import-lite"],
-    importsSort: eslintPluginImportsSort,
   },
 };
 
 export default defineConfig([
   {
-    ignores: [...eslintRules.GLOB_EXCLUDE, "eslint.config.js"],
+    ignores: eslintRules.GLOB_EXCLUDE,
   },
   {
     files: ["**/*.{js,jsx,ts,tsx}"],
@@ -54,7 +52,6 @@ export default defineConfig([
       ...eslintRules.stylistic,
       ...eslintRules.antfu,
       ...eslintRules.imports,
-      ...eslintRules.importsSort,
     },
   },
 ]);

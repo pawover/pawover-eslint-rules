@@ -73,7 +73,7 @@ const rules = {
 function createRules (rule: keyof typeof rules, prefix?: string) {
   const result: Record<string, RuleConfig<unknown[]>> = {};
 
-  if (rule && typeof rule === "string" && rules[rule]) {
+  if (typeof rule === "string" && rule in rules) {
     if (prefix) {
       return Object.entries(rules[rule]).reduce((acc, [key, value]) => {
         const oldPrefix = key.split("/")[0]!;
