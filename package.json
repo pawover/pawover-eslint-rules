@@ -6,8 +6,15 @@
   "type": "module",
   "version": "0.1.0",
   "packageManager": "pnpm@11.1.2",
+  "packageManager": "pnpm@11.1.2",
   "engines": {
     "node": ">=22.22.0"
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "24.15.0"
+    }
   },
   "keywords": [
     "pawover",
@@ -54,6 +61,8 @@
     "@arethetypeswrong/cli": "^0.18.2",
     "@eslint-react/eslint-plugin": "^5.8.4",
     "@stylistic/eslint-plugin": "^5.10.0",
+    "eslint": "^10.4.0",
+    "eslint-plugin-antfu": "^3.2.3",
     "eslint": "^10.4.0",
     "eslint-plugin-antfu": "^3.2.3",
     "eslint-plugin-import-lite": "^0.6.0",
