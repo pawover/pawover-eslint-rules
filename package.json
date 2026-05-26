@@ -45,7 +45,7 @@
   },
   "scripts": {
     "build": "pnpm clean:output && tsc -p tsconfig.build.json",
-    "public": "pnpm build && npm publish --access public",
+    "public": "pnpm build && pnpm publish --access public",
     "check": "pnpm check:types & pnpm check:eslint & pnpm check:format",
     "check:types": "tsc",
     "check:eslint": "pnpm build && pnpm eslint --fix \"**/*.{js,cjs,mjs,ts,cts,mts,jsx,tsx,vue}\"",
@@ -54,20 +54,27 @@
     "clean": "pnpm clean:lib & pnpm clean:output",
     "clean:lib": "rimraf node_modules",
     "clean:output": "rimraf dist",
-    "lib:up": "taze -I -r --exclude pnpm"
+    "lib:up": "taze -I -r --exclude pnpm",
+    "commit": "git cz",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.2",
-    "@eslint-react/eslint-plugin": "^5.8.4",
+    "@commitlint/cli": "^21.0.1",
+    "@commitlint/config-conventional": "^21.0.1",
+    "@eslint-react/eslint-plugin": "^5.8.5",
     "@stylistic/eslint-plugin": "^5.10.0",
+    "commitizen": "^4.3.1",
+    "cz-customizable": "^7.5.4",
     "eslint": "^10.4.0",
     "eslint-plugin-antfu": "^3.2.3",
     "eslint-plugin-import-lite": "^0.6.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-vue": "^10.9.1",
+    "husky": "^9.1.7",
     "prettier": "^3.8.3",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.59.4"
+    "typescript-eslint": "^8.60.0"
   },
   "peerDependencies": {
     "@eslint-react/eslint-plugin": "^5.7.4",
@@ -108,6 +115,14 @@
     },
     "typescript-eslint": {
       "optional": true
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "cz.config.cjs"
     }
   }
 }

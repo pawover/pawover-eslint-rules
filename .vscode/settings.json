@@ -4,12 +4,8 @@
     "source.fixAll": "never",
     "source.fixAll.eslint": "explicit",
     "source.fixAll.stylelint": "explicit",
-    "source.organizeImports": "never"
+    "source.organizeImports": "explicit"
   },
-  "prettier.printWidth": 120,
-  "prettier.singleAttributePerLine": true,
-  "prettier.vueIndentScriptAndStyle": true,
-  "prettier.quoteProps": "consistent",
   "eslint.codeAction.showDocumentation": { "enable": true },
   "eslint.quiet": false,
   "eslint.rules.customizations": [
