@@ -130,7 +130,7 @@ export default {
    * @descEN Prevents implicitly passing the children prop to components
    * @see https://www.eslint-react.xyz/docs/rules/no-implicit-children
    */
-  "react/no-implicit-children": 1,
+  "react/no-implicit-children": 0,
   /**
    * @desc 防止隐式传递 key prop
    * @descEN Prevents implicitly passing the key prop to components
