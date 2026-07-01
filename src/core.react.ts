@@ -495,6 +495,12 @@ export default {
    * @see https://www.eslint-react.xyz/docs/rules/web-api-no-leaked-timeout
    */
   "react/web-api-no-leaked-timeout": 2,
+  /**
+   * @desc 要求 IntersectionObserver 有对应的 disconnect
+   * @descEN Enforces that every IntersectionObserver created has a corresponding disconnect
+   * @see https://www.eslint-react.xyz/docs/rules/web-api-no-leaked-intersection-observer
+   */
+  "react/web-api-no-leaked-intersection-observer": 2,
 
   /**
    * @desc 强制 context 名称为有效组件名并以 Context 结尾
