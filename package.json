@@ -60,9 +60,9 @@
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.4",
-    "@commitlint/cli": "^21.1.0",
-    "@commitlint/config-conventional": "^21.1.0",
-    "@eslint-react/eslint-plugin": "^5.10.0",
+    "@commitlint/cli": "^21.2.1",
+    "@commitlint/config-conventional": "^21.2.0",
+    "@eslint-react/eslint-plugin": "^5.12.1",
     "@stylistic/eslint-plugin": "^5.10.0",
     "commitizen": "^4.3.2",
     "cz-customizable": "^7.5.4",
@@ -74,8 +74,8 @@
     "husky": "^9.1.7",
     "prettier": "^3.9.4",
     "taze": "^19.14.1",
-    "typescript": "^6.0.3",
-    "typescript-eslint": "^8.62.1"
+    "typescript": "^7.0.2",
+    "typescript-eslint": "^8.63.0"
   },
   "peerDependencies": {
     "@eslint-react/eslint-plugin": "^5.9.0",
@@ -86,7 +86,7 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-simple-import-sort": "^13.0.0",
     "eslint-plugin-vue": "^10.8.0",
-    "typescript": "^5.9.3 || ^6.0.0",
+    "typescript": "^5.9.3 || ^6.0.0 || ^7.0.0",
     "typescript-eslint": "^8.57.0"
   },
   "peerDependenciesMeta": {
