@@ -523,7 +523,7 @@ export default {
    * @descEN Disallow unnecessary namespace qualifiers
    * @see https://typescript-eslint.io/rules/no-unnecessary-qualifier
    */
-  "ts/no-unnecessary-qualifier": 2,
+  "ts/no-unnecessary-qualifier": 0,
   /**
    * @desc 禁止不必要的模板表达式
    * @descEN Disallow unnecessary template expressions
