@@ -38,3 +38,5 @@ lerna-debug.log*
 # auto
 auto-*.json
 auto-*.d.ts
+
+AGENTS.md
