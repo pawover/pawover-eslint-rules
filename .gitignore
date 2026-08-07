@@ -5,11 +5,8 @@ node_modules
 
 # Misc
 .idea
-.vscode/*
-!.vscode/settings.json
-.DS_Store
-vite.config.ts.timestamp-*.mjs
-*_vite.config.ts
+.vscode
+.zed
 
 # output
 dist
