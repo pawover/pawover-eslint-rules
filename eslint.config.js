@@ -6,7 +6,7 @@ import eslintPluginStylistic from "@stylistic/eslint-plugin";
 import eslintPluginAntfu from "eslint-plugin-antfu";
 import eslintPluginImports from "eslint-plugin-import-lite";
 
-import eslintRules from "./dist/index.js";
+import eslintRules from "./dist/esm/index.js";
 
 const plugins = {
   typescript: {

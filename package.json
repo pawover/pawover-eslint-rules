@@ -25,36 +25,46 @@
     "type": "git",
     "url": "https://github.com/pawover/pawover-eslint-rules.git"
   },
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
   "types": "dist/types/index.d.ts",
   "files": [
     "dist"
   ],
   "exports": {
     ".": {
-      "types": "./dist/types/index.d.ts",
-      "import": "./dist/index.js",
-      "default": "./dist/index.js"
+      "import": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/types/index.d.cts",
+        "default": "./dist/cjs/index.js"
+      }
     },
     "./src/*": {
-      "types": "./dist/types/*.d.ts",
-      "import": "./dist/*.js",
-      "default": "./dist/*.js"
+      "import": {
+        "types": "./dist/types/*.d.ts",
+        "default": "./dist/esm/*.js"
+      },
+      "require": {
+        "types": "./dist/types/*.d.cts",
+        "default": "./dist/cjs/*.js"
+      }
     }
   },
   "scripts": {
-    "build": "pnpm clean:output && tsc -p tsconfig.build.json",
+    "build": "node scripts/build.mjs",
     "public": "pnpm build && pnpm publish --access public",
     "check": "pnpm check:types & pnpm check:eslint & pnpm check:format",
     "check:types": "tsc",
     "check:eslint": "pnpm build && pnpm eslint --fix \"**/*.{js,cjs,mjs,ts,cts,mts,jsx,tsx,vue}\"",
     "check:format": "prettier --write \"**/*.{html,json}\"",
-    "check:pack": "attw --pack .",
+    "check:pack": "pnpm dlx @arethetypeswrong/cli --pack . --profile node16",
     "clean": "pnpm clean:lib & pnpm clean:output",
     "clean:lib": "rimraf node_modules",
     "clean:output": "rimraf dist",
-    "lib:up": "taze -I -r --exclude pnpm",
+    "lib:up": "pnpm dlx taze -I -r --exclude pnpm",
     "commit": "git cz",
     "prepare": "husky"
   },
